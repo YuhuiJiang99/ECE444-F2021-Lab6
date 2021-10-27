@@ -2,4 +2,4 @@ venv
 *cache
 *.DS_Store
 __pycache__
-test.db
+*.db
