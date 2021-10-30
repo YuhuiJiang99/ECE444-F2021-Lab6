@@ -31,6 +31,8 @@ SQLALCHEMY_DATABASE_URI = os.getenv(
 )
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
+if SQLALCHEMY_DATABASE_URI and SQLALCHEMY_DATABASE_URI .startswith("postgres://"):
+    SQLALCHEMY_DATABASE_URI  = SQLALCHEMY_DATABASE_URI .replace("postgres://", "postgresql://", 1)
 
 # create and initialize a new Flask app
 app = Flask(__name__)
